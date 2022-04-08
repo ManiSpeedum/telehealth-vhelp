@@ -3,7 +3,7 @@ import '../style.css';
 
 function NavbarMegaMenu() {
     return ( 
-        <div className='NavbarSubCardsBox'>hi</div>
+        <div className='NavbarSubCardsBox NavbarMegaMenu container '>hi</div>
      );
 }
 

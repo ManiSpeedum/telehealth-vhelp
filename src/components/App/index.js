@@ -1,10 +1,11 @@
-import Navbar from "../Template/Navbar/Navbar";
+
+import Navlink from "../Navlink";
 import Template from "../Template/Template";
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Navlink></Navlink>
       <Template/>
     </div>
   );

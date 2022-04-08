@@ -2,7 +2,7 @@ import React from 'react';
 
 function NavbarSettings() {
     return ( 
-        <div className='NavbarSubCardsBox'>NavbarSettings</div>
+        <div className='NavbarSubCardsBox NavbarMegaSettings container '>NavbarSettings</div>
      );
 }
 

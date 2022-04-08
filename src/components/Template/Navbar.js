@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import "../../assets/css/basemin.css";
+import NavbarLeftHamburger from "./Navbar/NavbarLeftHamburger";
 import NavbarMegaMenu from "./Navbar/NavbarMegaMenu";
 import NavbarProjects from "./Navbar/NavbarProjects";
 import NavbarSettings from "./Navbar/NavbarSettings";
 import NavbarUserProfile from "./Navbar/NavbarUserprofile";
+import NavbarRightHamburger from './Navbar/NavbarRightHamburger';
+import NavbarGridViewIcon from "./Navbar/NavbarGridViewIcon";
+import NavbarBellIcon from "./Navbar/NavbarBellIcon";
+import NavbarCountryIcon from "./Navbar/NavbarCountryIcon";
 
 const Navbar = () => {
 
@@ -11,9 +16,15 @@ const Navbar = () => {
   const[ShowContentSettings,setShowContentSettings]=useState(false);
   const[showContentProjects,setShowContentProjects]=useState(false);
   const[showContentUserProfile,setShowContentUserProfile]=useState(false);
+  const[showContentLeftHamburger,setShowContentLeftHamburger]=useState(false);
+  const[showContentRightHamburger,setShowContentRightHamburger]=useState(false);
+  const[showContentGridViewIcon,setShowContentGridViewIcon]=useState(false);
+  const[showContentBellIcon,setShowContentBellIcon]=useState(false);
+  const[showContentCountryIcon,setShowContentCountryIcon]=useState(false);
+
 
   const onClickdownArrowMenu = () =>{
-    setShowContentMenu(prev => !prev);
+    setShowContentMenu(prev=>!prev)
   }
   const onClickdownArrowSettings = () =>{
     setShowContentSettings(prev => !prev);
@@ -24,15 +35,26 @@ const Navbar = () => {
   const onClickdownArrowUserProfile = () =>{
     setShowContentUserProfile(prev => !prev);
   }
-
+  const onClickLeftHamburger = () =>{
+    setShowContentLeftHamburger(prev=>!prev)
+  }
+ const onClickRightHamburger = () =>{
+  setShowContentRightHamburger(prev => !prev)
+ }
+ const onClickContentGridViewIcon = () =>{
+  setShowContentGridViewIcon(prev=>!prev)
+ }
+ const onClickContentBellIcon = () =>{
+  setShowContentBellIcon(prev=>!prev)
+ }
+ const onClickContentCountryIcon = () =>{
+  setShowContentCountryIcon(prev=>!prev)
+ }
 
   return (
-    //  {showContentMenu ? <NavbarMegaMenu/> : null} 
-    //  {ShowContentSettings ? <NavbarSettings/> : null}
-    //   {showContentProjects ? <NavbarProjects/> : null}
-    //    {showContentUserProfile ? <NavbarUserProfile/> : null}
-    
-    <div className="app-header header-shadow" >
+    <nav className="navbar navbar-inverse">
+      <div className="app-header header-shadow " >
+       
       <div className="app-header__logo">
         <div className="logo-src">
           <img
@@ -47,6 +69,7 @@ const Navbar = () => {
               type="button"
               class="hamburger close-sidebar-btn hamburger--elastic"
               data-class="closed-sidebar"
+              onClick={onClickLeftHamburger}
             >
               <span className="hamburger-box">
                 <span className="hamburger-inner"></span>
@@ -61,6 +84,7 @@ const Navbar = () => {
           <div className="search-wrapper">
             <div className="input-holder">
               <div className="search-icon">
+                
                 <i className="fa fa-search" style={{ color: "blue" }}></i>
               </div>
             </div>
@@ -100,23 +124,23 @@ const Navbar = () => {
          
           <div className="app-header-right">
             <div className="header-dots">
-              <div className="input-holder input-holder-table-icon">
+              <button className="input-holder input-holder-table-icon btn" onClick={onClickContentGridViewIcon}>
                 <div className="table-icon icon4">
                   <i class="fa fa-table" style={{ color: "blue" }}></i>
                 </div>
-              </div>
-              <div className="input-holder input-holder-bell-icon">
+              </button>
+              <button className="input-holder input-holder-bell-icon btn" onClick={onClickContentBellIcon}>
                 <div className="bell-icon icon4">
                   <i className="fa fa-bell" style={{ color: "red" }}></i>
                 </div>
-              </div>
+              </button>
               <div className="input-holder">
-                <div className="country-icon icon4">
+                <button className="country-icon icon4 btn" onClick={onClickContentCountryIcon}>
                   <img
                     src="https://react.architectui.com/architectui-react-pro/static/media/DE.22d50712.svg"
                     alt=""
                   ></img>
-                </div>
+                </button>
               </div>
             </div>
           </div>
@@ -152,6 +176,7 @@ const Navbar = () => {
                   type="button"
                   className="hamburger close-sidebar-btn hamburger--elastic burger"
                   data-class="closed-sidebar"
+                  onClick={onClickRightHamburger}
                 >
                   <span className="hamburger-box">
                     <span className="hamburger-inner"></span>
@@ -164,7 +189,18 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-
+    {showContentMenu ? <NavbarMegaMenu/> : null} 
+     {ShowContentSettings ? <NavbarSettings/> : null}
+      {showContentProjects ? <NavbarProjects/> : null}
+       {showContentUserProfile ? <NavbarUserProfile/> : null}
+       {showContentLeftHamburger ? <NavbarLeftHamburger/> : null}
+       {showContentRightHamburger ? <NavbarRightHamburger/> : null}
+       {showContentGridViewIcon ? <NavbarGridViewIcon/> : null}
+       {showContentBellIcon ? <NavbarBellIcon/> : null}
+       {showContentCountryIcon ?<NavbarCountryIcon/> : null}
+</nav>
+    
+    
    
     
   );

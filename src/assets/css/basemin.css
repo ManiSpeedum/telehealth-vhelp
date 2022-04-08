@@ -1,6 +1,7 @@
 .app-header.header-shadow {
     box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
     display: flex;
+    width:100%;
 }
 .app-header__logo {
     padding: 0 1.5rem;
@@ -96,9 +97,9 @@
     min-width: 280px;
     position: relative;
     flex: 0 0 280px;
-    margin-top: -60px;
-    padding-top: 60px;
+    padding-top: 20px;
     transition: all .2s;
+    z-index: -1;
 }
 .app-header .app-header__content {
     display: flex;
@@ -126,7 +127,7 @@
 }
 .app-sidebar__heading {
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: 15px;
     margin: .75rem 0;
     font-weight: 700;
     color: #3f6ad8;
@@ -142,7 +143,6 @@
 }
 .LeftSidebarSubLinks:hover{
     background-color: #e0f3ff;
-    
 }
 .app-main__inner {
     padding: 30px 30px 0;
@@ -181,8 +181,8 @@
 }
 .search-icon{
     position: absolute;
-    top:6px;
-    left:32%;
+    top:9px;
+    left:33%;
 }
 .nav {
     display: flex;
@@ -222,23 +222,24 @@
     display: flex;
     margin-left: auto;
     position: relative;
-    left:250px;
+    left:300px;
 }
 .icon4{
     position: absolute;
-    top:8px;
+    top:10px;
     left:30%;
 }
 .bell-icon{
-    top:6px;
-    left:28%;
+    top:8px;
+    left:30%;
 }
 .country-icon{
-    top:6px;
-    left:25%;
+    top:2px;
+    left:-6%;
 }
 .header-dots{
     display: flex;
+   
 }
 .input-holder-table-icon{
     background-color: #b7d7e8!important;
@@ -297,4 +298,15 @@
 button{
     border: none;
     background-color: white;
+}
+.navbar-inverse{
+    width: 100%;
+    background-color: white;
+    border: none;
+    padding: 0%;
+    margin: 0%;
+}
+.container-fluid{
+    width: 100%;
+    padding: 0;
 }

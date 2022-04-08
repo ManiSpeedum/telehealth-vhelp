@@ -1,17 +1,17 @@
 import React from 'react'
-import {Switch,Route} from 'react-router-dom';
+import {Route,Routes } from "react-router-dom";
 import Form from '../spdForm/index';
 import Table from '../Table/Table';
 import Home from '../Home/Home';
 
-function Router() {
+function RoutePath() {
     return ( 
-        <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route exact path='/Form' component={Form}></Route>
-            <Route exact path='/Table' component={Table}></Route>
-        </Switch>
+        <Routes>
+            <Route exact path="/" element={<Home/>}></Route>
+            <Route exact path='/Form' element={<Form/>}></Route>
+            <Route exact path='/Table' element={<Table/>}></Route>
+        </Routes>
      );
 }
 
-export default Router;
+export default RoutePath;

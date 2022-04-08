@@ -1,23 +1,40 @@
 .NavbarSubCardsBox{
     width: 200px;
-    height: 200x;
+    height: 400px;
     border: 2px solid red;
-}
-.navbar-inverse{
-    background-color: white;
-    border: none;
-    position: relative;
-}
-/* .Website-logo{
     position: absolute;
-    left:0px;
-    top:0px;
-} */
-.container-fluid{
-    display: flex;
-    flex-direction: row;
+    background-color: red;
+     position: absolute;
+    top:50px;
 }
-.navbar-nav{
-    display: flex;
-    flex-direction: row;
+.NavbarMegaMenu{
+   
+    left:350px;
+}
+.NavbarProjects{
+
+    left:590px;
+}
+.NavbarMegaSettings{
+
+    left:480px;
+}
+.NavbarUserProfile{
+
+    right:180px;
+}
+.NavbarLeftHamburger{
+    left: 64px;
+}
+.NavbarRightHamburger{
+    right: 60px;
+}
+.NavbarGridViewIcon{
+    left:950px;
+}
+.NavbarBellIcon{
+    right:400px;
+}
+.NavbarCountryIcon{
+    right: 350px;
 }
